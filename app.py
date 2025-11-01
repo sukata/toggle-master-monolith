@@ -48,7 +48,7 @@ def init_db_command():
 
 @app.route('/health', methods=['GET'])
 def health_check():
-    return jsonify({"status": "ok"}), 200
+    return jsonify({"status": "Estado 200 - ok"}), 200
 
 @app.route('/flags', methods=['POST'])
 def create_flag():
@@ -140,4 +140,5 @@ def update_flag(name):
     return jsonify({"message": f"Flag '{name}' atualizada"}), 200
 
 if __name__ == '__main__':
+
     app.run(host='0.0.0.0', port=5000)
